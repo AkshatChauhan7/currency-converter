@@ -9,6 +9,7 @@ const App = () => {
   const [convertAmount, setConvertAmount] = useState(0); // converted
   const [loading, setLoading] = useState(false); // loading state
   const [error, setError] = useState(null); // error state
+  
 
   const handleConvert = async () => {
     setLoading(true);
@@ -37,7 +38,10 @@ const App = () => {
               type="number"
               id="amount of currency"
               value={amount}
-              onChange={(e) => setAmount(e.target.value)}
+              onChange={(e) => {
+  setAmount(e.target.value);
+  setConvertAmount(0); // clear old result
+}}
             />
           </label>
         </div>
@@ -48,7 +52,10 @@ const App = () => {
               From:
               <select
                 value={fromCurrency}
-                onChange={(e) => setFromCurrency(e.target.value)}
+                onChange={(e) => {
+  setAmount(e.target.value);
+  setConvertAmount(0); 
+}}
               >
                 <option value="USD">USD - US Dollar 🇺🇸</option>
                 <option value="EUR">EUR - Euro 🇪🇺</option>
@@ -77,7 +84,10 @@ const App = () => {
               To:
               <select
                 value={toCurrency}
-                onChange={(e) => setToCurrency(e.target.value)}
+                onChange={(e) => {
+  setAmount(e.target.value);
+  setConvertAmount(0); // clear old result
+}}
               >
                 <option value="USD">USD - US Dollar 🇺🇸</option>
                 <option value="EUR">EUR - Euro 🇪🇺</option>

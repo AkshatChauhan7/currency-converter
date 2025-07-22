@@ -2,7 +2,7 @@
 
 A clean and responsive currency converter built with React and ExchangeRate API. This app allows users to convert between 18+ global currencies in real-time with a modern, minimalist user interface that supports both light and dark modes.
 
-![Currency Converter Preview](./assets/ss1.png)
+![Currency Converter Preview](src/assets/ss1.png)
 
 ---
 
