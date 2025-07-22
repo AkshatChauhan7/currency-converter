@@ -1,31 +1,33 @@
-# 💱 Currency Converter Web App
+# Currency Converter Web App
 
-A modern, minimalist currency converter built with **React** and **ExchangeRate API**, supporting real-time conversion between 18+ currencies. Designed with responsive UI and dark mode compatibility.
+A clean and responsive currency converter built with React and ExchangeRate API. This app allows users to convert between 18+ global currencies in real-time with a modern, minimalist user interface that supports both light and dark modes.
 
-![Currency Converter Preview](./screenshot.png)
-
----
-
-## 🚀 Features
-
-- 🌐 Real-time currency exchange using [ExchangeRate API](https://www.exchangerate-api.com/)
-- ✨ Sleek glassmorphism UI with light/dark mode support
-- 📱 Fully responsive for mobile and desktop
-- 🔁 Conversion between 18+ currencies (USD, EUR, INR, JPY, etc.)
-- 📊 Displays exact conversion rate + calculated value
-- ⚡ Smooth transitions and micro-interactions
+![Currency Converter Preview](ss1.png)
 
 ---
 
-## 🧠 Tech Stack
+## Features
 
-- **React** (with functional components + hooks)
-- **CSS3** (glassmorphism + dark mode with `prefers-color-scheme`)
-- **ExchangeRate API** (Free Plan)
+- Real-time exchange rates powered by [ExchangeRate API](https://www.exchangerate-api.com/)
+- Modern UI design with glassmorphism and system theme support
+- Fully responsive layout for both desktop and mobile
+- Supports over 18 major international currencies
+- Displays both the live conversion rate and the calculated amount
+- Smooth transitions and simple interactive elements for a better user experience
 
 ---
 
-## 📦 Installation
+## Tech Stack
+
+- **React** – Functional components and hooks
+- **CSS3** – Custom responsive styles with glassmorphism and dark mode support
+- **ExchangeRate API** – Free currency conversion API
+
+---
+
+## Getting Started
+
+To run this project locally:
 
 ```bash
 git clone https://github.com/your-username/currency-converter-app.git
