@@ -32,16 +32,16 @@ const App = () => {
         <h1>Convert your currency</h1>
 
         <div>
-          <label htmlFor="amount of currency">
+          <label htmlFor="amount-of-currency">
             Amount of currency:
             <input
               type="number"
-              id="amount of currency"
+              id="amount-of-currency"
               value={amount}
               onChange={(e) => {
-  setAmount(e.target.value);
-  setConvertAmount(0); // clear old result
-}}
+              setAmount(Number(e.target.value));
+              setConvertAmount(0); 
+            }}
             />
           </label>
         </div>
@@ -51,11 +51,11 @@ const App = () => {
             <label>
               From:
               <select
-  value={fromCurrency}
-  onChange={(e) => {
-    setFromCurrency(e.target.value); 
-    setConvertAmount(0);
-  }}
+                value={fromCurrency}
+                onChange={(e) => {
+                  setFromCurrency(e.target.value); 
+                  setConvertAmount(0);
+                }}
 >
                 <option value="USD">USD - US Dollar 🇺🇸</option>
                 <option value="EUR">EUR - Euro 🇪🇺</option>
@@ -83,12 +83,12 @@ const App = () => {
             <label>
               To:
               <select
-  value={toCurrency}
-  onChange={(e) => {
-    setToCurrency(e.target.value); 
-    setConvertAmount(0);
-  }}
->
+                value={toCurrency}
+                onChange={(e) => {
+                  setToCurrency(e.target.value); 
+                  setConvertAmount(0);
+                }}
+              >
               
                 <option value="USD">USD - US Dollar 🇺🇸</option>
                 <option value="EUR">EUR - Euro 🇪🇺</option>
@@ -117,19 +117,17 @@ const App = () => {
           {loading ? "Converting..." : "Convert"}
         </button>
 
-        {/* RESULT – Now correctly inside the card */}
-        {convertAmount > 0 && (
-          <div className="conversion-result">
-            <p>1 {fromCurrency} = {(convertAmount / amount).toFixed(2)} {toCurrency}</p>
-            <h2>
-              {amount} {fromCurrency} = {convertAmount.toFixed(2)} {toCurrency}
-            </h2>
-          </div>
-        )}
-
-        {/* Optional: Error Display */}
+        {convertAmount > 0 && amount > 0 && (
+        <div className="conversion-result">
+          <p>1 {fromCurrency} = {(convertAmount / amount).toFixed(2)} {toCurrency}</p>
+        <h2>
+          {amount} {fromCurrency} = {convertAmount.toFixed(2)} {toCurrency}
+        </h2>
+      </div>
+)}
+  
         {error && (
-          <div className="conversion-result" style={{ background: "#ff4d4f" }}>
+          <div className="conversion-result" >
             <p>{error}</p>
           </div>
         )}
