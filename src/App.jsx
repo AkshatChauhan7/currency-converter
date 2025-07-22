@@ -51,12 +51,12 @@ const App = () => {
             <label>
               From:
               <select
-                value={fromCurrency}
-                onChange={(e) => {
-  setAmount(e.target.value);
-  setConvertAmount(0); 
-}}
-              >
+  value={fromCurrency}
+  onChange={(e) => {
+    setFromCurrency(e.target.value); 
+    setConvertAmount(0);
+  }}
+>
                 <option value="USD">USD - US Dollar 🇺🇸</option>
                 <option value="EUR">EUR - Euro 🇪🇺</option>
                 <option value="GBP">GBP - British Pound 🇬🇧</option>
@@ -83,12 +83,13 @@ const App = () => {
             <label>
               To:
               <select
-                value={toCurrency}
-                onChange={(e) => {
-  setAmount(e.target.value);
-  setConvertAmount(0); // clear old result
-}}
-              >
+  value={toCurrency}
+  onChange={(e) => {
+    setToCurrency(e.target.value); 
+    setConvertAmount(0);
+  }}
+>
+              
                 <option value="USD">USD - US Dollar 🇺🇸</option>
                 <option value="EUR">EUR - Euro 🇪🇺</option>
                 <option value="GBP">GBP - British Pound 🇬🇧</option>
