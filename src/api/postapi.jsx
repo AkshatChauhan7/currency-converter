@@ -1,8 +1,7 @@
 import axios from 'axios'
 
-// https://v6.exchangerate-api.com/v6/f07645a0931923b3cdbf3e95/latest/USD
 const api = axios.create({
-    baseURL: 'https://v6.exchangerate-api.com/v6/f07645a0931923b3cdbf3e95',
+    baseURL: 'your_api_key',
 });
 
 export const getcurrency = (fromcurrency, tocurrency, amount) => {
